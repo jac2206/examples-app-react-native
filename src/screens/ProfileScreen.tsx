@@ -1,5 +1,5 @@
 import { View, StyleSheet, ScrollView } from "react-native";
-import { ProfileCard } from "../components/ProfileCart";
+import { ProfileCard } from "../components/ProfileCard";
 
 export function ProfileScreen() {
   return (
