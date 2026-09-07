@@ -4,6 +4,7 @@ import { AppStackParamList } from "../types/navigation";
 import { ExampleScreen } from "../screens/ExampleScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { FirstScreen } from "../screens/FirstScreen";
+import { ProfileScreen } from "../screens/ProfileScreen";
 
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -17,9 +18,14 @@ export function AppNavigator() {
             component={ExampleScreen}
             // options={{ title: 'Inicio' }}
         /> */}
-        <Stack.Screen
+        {/* <Stack.Screen
             name="First"
             component={FirstScreen}
+            // options={{ title: 'Inicio' }}
+        /> */}
+        <Stack.Screen
+            name="Profile"
+            component={ProfileScreen}
             // options={{ title: 'Inicio' }}
         />
         </Stack.Navigator>
