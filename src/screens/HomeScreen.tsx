@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import { AppStackParamList } from "../types/navigation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
@@ -9,12 +9,21 @@ export function HomeScreen({navigation, route}:Props) {
 
     const userEmail = route.params.userEmail
 
+    const goToProfile = async () => {
+      navigation.navigate("Profile")
+    }
+
     return(
         <View style={styles.container}>
             <Text style={styles.text}>
                 Home: {userEmail}
             </Text>
-
+            
+            <Pressable style={styles.button} onPress={goToProfile}>
+              <Text style={styles.buttonText}>
+                  Perfiles
+                </Text>
+              </Pressable>
         </View>
     )
 

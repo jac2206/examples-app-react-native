@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import {CustomInputFieldProps} from "../types/components"
 
-type Props = {
-  placeholder: string;
-  value: string;
-  onChangeText: (text: string) => void;
-  secureTextEntry?: boolean;
-};
+// type Props = {
+//   placeholder: string;
+//   value: string;
+//   onChangeText: (text: string) => void;
+//   secureTextEntry?: boolean;
+// };
+
+type Props = CustomInputFieldProps 
 
 export function InputField({
   placeholder,
