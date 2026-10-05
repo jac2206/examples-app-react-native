@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import {CustomInputFieldProps} from "../types/components"
+import { CustomInputFieldProps } from "../types/components";
 
 // type Props = {
 //   placeholder: string;
@@ -10,7 +10,7 @@ import {CustomInputFieldProps} from "../types/components"
 //   secureTextEntry?: boolean;
 // };
 
-type Props = CustomInputFieldProps 
+type Props = CustomInputFieldProps;
 
 export function InputField({
   placeholder,
