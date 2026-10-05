@@ -4,6 +4,10 @@ export type AppStackParamList = {
   Profile: undefined;
   Login: undefined;
   Home: {
-    userEmail:string
-  }
+    userEmail: string;
+  };
+  Pokemon: undefined;
+  Products: undefined;
+  ProductEditor: { productId?: number };
+  AxiosDemo: undefined;
 };

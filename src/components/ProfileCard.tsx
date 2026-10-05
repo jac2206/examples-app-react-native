@@ -7,46 +7,23 @@ interface ProfileCardProps {
   image: string;
 }
 
-export function ProfileCard({
-  name,
-  profession,
-  city,
-  image,
-}: ProfileCardProps) {
-    
+export function ProfileCard({ name, profession, city, image }: ProfileCardProps) {
   const callMessage = async () => {
-    Alert.alert(
-      name,
-      `Profesión: ${profession}\nCiudad: ${city}`
-    );
+    Alert.alert(name, `Profesión: ${profession}\nCiudad: ${city}`);
   };
 
   return (
     <View style={styles.card}>
-      <Image
-        source={{ uri: image }}
-        style={styles.image}
-      />
+      <Image source={{ uri: image }} style={styles.image} />
 
-      <Text style={styles.name}>
-        {name}
-      </Text>
+      <Text style={styles.name}>{name}</Text>
 
-      <Text style={styles.info}>
-        {profession}
-      </Text>
+      <Text style={styles.info}>{profession}</Text>
 
-      <Text style={styles.info}>
-        {city}
-      </Text>
+      <Text style={styles.info}>{city}</Text>
 
-      <Pressable
-        style={styles.button}
-        onPress={callMessage}
-      >
-        <Text style={styles.buttonText}>
-          Ver más
-        </Text>
+      <Pressable style={styles.button} onPress={callMessage}>
+        <Text style={styles.buttonText}>Ver más</Text>
       </Pressable>
     </View>
   );

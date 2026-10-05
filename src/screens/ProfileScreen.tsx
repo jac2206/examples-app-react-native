@@ -1,21 +1,19 @@
-import { View, StyleSheet, ScrollView, Pressable, Text } from "react-native";
+import { View, ScrollView, Pressable, Text } from "react-native";
 import { ProfileCard } from "../components/ProfileCard";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { AppStackParamList } from "../types/navigation";
+import { profileStyles as styles } from "../styles/ProfileScreen.styles";
 
 type Props = NativeStackScreenProps<AppStackParamList, "Profile">;
 
-export function ProfileScreen({navigation}: Props) {
-
-  const goToBackHome = async() =>{
-    navigation.goBack()
-  }
+export function ProfileScreen({ navigation }: Props) {
+  const goToBackHome = async () => {
+    navigation.goBack();
+  };
 
   return (
     <View style={styles.container}>
-      <ScrollView
-        contentContainerStyle={styles.content}
-      >
+      <ScrollView contentContainerStyle={styles.content}>
         <ProfileCard
           name="Goku"
           profession="Guerrero Saiyajin"
@@ -44,38 +42,9 @@ export function ProfileScreen({navigation}: Props) {
           image="https://static.wikitide.net/deathbattlewiki/1/1f/Portrait.edwardelric.png"
         />
         <Pressable style={styles.button} onPress={goToBackHome}>
-          <Text style={styles.buttonText}>
-              Volver
-          </Text>
+          <Text style={styles.buttonText}>Volver</Text>
         </Pressable>
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000000ee",
-  },
-  content: {
-    alignItems: "center",
-    paddingVertical: 20,
-  },
-    button: {
-    backgroundColor: '#fff8f8ee',
-    color: '#000000ee',
-    borderRadius: 12,
-    minHeight: 52,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 16
-  },
-  buttonText: { 
-    color: "#000000ee", 
-    fontSize: 18, 
-    fontWeight: "bold", 
-    textAlign: "center", 
-  },
-});
