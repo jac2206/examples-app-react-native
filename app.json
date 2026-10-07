@@ -6,17 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/pokedex.png",
     "userInterfaceStyle": "light",
-    "plugins": [
-      "expo-font",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/pokedex.png",
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
     "ios": {
       "supportsTablet": true
     },
