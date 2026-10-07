@@ -2,9 +2,9 @@
   "expo": {
     "name": "examples-app",
     "slug": "examples-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/pokedex.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
@@ -16,10 +16,16 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.jac112206.examplesapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "76caa421-7daa-41a0-a405-64c37ebec1af"
+      }
     }
   }
 }
